@@ -1,13 +1,9 @@
 package main
 
 import (
-	"encoding/json"
 	"fmt"
 	"github.com/ahmedsamyeg/ready2go/cmd/entity"
 	"github.com/ahmedsamyeg/ready2go/cmd/service"
-	"io"
-	"log"
-	"net/http"
 	"os"
 )
 
@@ -61,26 +57,4 @@ func printHelp() {
 	fmt.Println("Ready2Go")
 	fmt.Println("Api test automation tool.")
 	fmt.Println("USAGE: readytogo <FILENAME>")
-}
-
-func TestSingleEndPoint(err error, file []byte) {
-	var test entity.Test
-	err = json.Unmarshal(file, &test)
-	if err != nil {
-		fmt.Println(err)
-	}
-	response, err := http.Get(test.EndPoint)
-	responseData, err := io.ReadAll(response.Body)
-	if err != nil {
-		log.Fatal(err)
-	}
-	mJson, err := json.Marshal(test.Expects)
-	if err != nil {
-		fmt.Println(err.Error())
-		return
-	}
-	fmt.Println(response.StatusCode)
-	fmt.Println(string(responseData))
-	fmt.Println(string(mJson))
-	fmt.Println(string(mJson) == string(responseData))
 }

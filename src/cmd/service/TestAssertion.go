@@ -38,20 +38,3 @@ func Assert(test entity.ApiTest) (bool, error) {
 
 	return true, nil
 }
-
-//
-//	response, err := http.Get(test.EndPoint)
-//	responseData, err := io.ReadAll(response.Body)
-//	if err != nil {
-//		log.Fatal(err.Error())
-//	}
-//	mJson, err := json.Marshal(test.Expects)
-//	if err != nil {
-//		fmt.Println(err.Error())
-//	}
-//	fmt.Println(response.StatusCode)
-//	fmt.Println(string(responseData))
-//	fmt.Println(string(mJson))
-//	fmt.Println(string(mJson) == string(responseData))
-//	return entity.ApiTestJsonFile{}, nil
-//}
