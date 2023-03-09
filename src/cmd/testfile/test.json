@@ -1,0 +1,62 @@
+{
+  "version": "1.3",
+  "project_name": "",
+  "environment": "",
+  "tests": [
+    {
+      "category": "Echo Api returns response",
+      "title": "endpoint returns ahmed",
+      "endpoint": "http://localhost:5196/echo?name=ahmed",
+      "header": "",
+      "test_type": "response",
+      "expected_response": {
+        "echo": "ahmed"
+      },
+      "expected_status_code": 200
+    },
+    {
+      "category": "Echo Api returns response",
+      "title": "endpoint returns samir",
+      "endpoint": "http://localhost:5196/echo?name=samir",
+      "header": "",
+      "test_type": "response",
+      "expected_response": {
+        "echo": "samir"
+      },
+      "expected_status_code": 200
+    },
+    {
+      "category": "Echo Api returns response",
+      "title": "endpoint returns john",
+      "endpoint": "http://localhost:5196/echo?name=john",
+      "header": "",
+      "test_type": "response",
+      "expected_response": {
+        "echo": "john"
+      },
+      "expected_status_code": 200
+    },
+    {
+      "category": "Echo Api returns response",
+      "title": "endpoint returns salma",
+      "endpoint": "http://localhost:5196/echo?name=salma",
+      "header": "",
+      "test_type": "response",
+      "expected_response": {
+        "echo": "salma"
+      },
+      "expected_status_code": 200
+    },
+    {
+      "category": "Echo Api returns response",
+      "title": "endpoint returns ali",
+      "endpoint": "http://localhost:5196/echo?name=ali",
+      "header": "",
+      "test_type": "response",
+      "expected_response": {
+        "echo": "ali"
+      },
+      "expected_status_code": 200
+    }
+  ]
+}
